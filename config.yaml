@@ -136,7 +136,7 @@ spec:
     spec:
       containers:
       - name: fluent-bit
-        image: cr.yandex/crpa6b3re4pr2jpg3j34/fluentbit:1.0
+        image: cr.yandex/crpa6b3re4pr2jpg3j34/fluentbit-yc:1.0.1
         imagePullPolicy: Always
         ports:
           - containerPort: 2020
