@@ -53,7 +53,7 @@ data:
         group_id        log_group_id_xxxxxx
         resource_id     cluster_id_xxxxxx
         message_key     log
-        authorization   instance-service-account
+        authorization   iam-key-file:/etc/secret/key.json
 
   parsers.conf: |
     [PARSER]
@@ -149,6 +149,8 @@ spec:
           readOnly: true
         - name: fluent-bit-config
           mountPath: /fluent-bit/etc/
+        - name: secret-key-json-volume
+          mountPath: /etc/secret
       terminationGracePeriodSeconds: 10
       volumes:
       - name: varlog
@@ -160,6 +162,9 @@ spec:
       - name: fluent-bit-config
         configMap:
           name: fluent-bit-config
+      - name: secret-key-json-volume
+        secret:
+          secretName: secret-key-json
       serviceAccountName: fluent-bit
       tolerations:
       - key: node-role.kubernetes.io/master
