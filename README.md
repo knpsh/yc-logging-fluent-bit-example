@@ -28,6 +28,13 @@ kube_cluster_id = "xxx"
 ```
 4. Run `terraform init` and `terraform apply`
 
+# Using Helm only
+
+You can use Helm chart directly if you want.
+Just fill the `./helm/values.yaml` file with the Cloud Logging group ID and Kubernetes cluster ID.
+And place the Cloud Logging service account `key.json` file in the `./helm` folder.
+After that, run `helm install` command.
+
 # Notes
 
 `config.yaml` file in the root of this folder is temporary and exists only to display various options available to configure in fluent-bit plugin. Configuration file that is actually used during deployment through Terraform/Helm is located at `./helm/templates/config-map.yaml`

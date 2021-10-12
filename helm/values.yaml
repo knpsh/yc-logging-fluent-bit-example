@@ -1,3 +1,3 @@
-logging_group_id: e23h5ag9f9vp1ah6d1ag
-kubernetes_cluster_id: catkut0vgblelnvh5stj
+logging_group_id: xxx
+kubernetes_cluster_id: xxx
 fluent_bit_image: cr.yandex/yc/fluent-bit-plugin-yandex:v1.0.3-fluent-bit-1.8.6
