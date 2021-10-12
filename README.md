@@ -9,7 +9,7 @@ This module requires two `key.json` file placed in `./helm` and `./` folders res
 
 1. Cloud Logging service account `key.json` file with the following folder roles:
 - `logging.writer`
-- `monitoring editor`
+- `monitoring.editor`
 
 2. Kubernetes cluster ID (optional)
 3. Kubernetes authentication configured (`~/.kube/config` must already exist)
