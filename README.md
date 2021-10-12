@@ -2,8 +2,8 @@
 
 # Description
 
-Terraform module creates the Cloud Logging log-group and deploys fluent-bit with required configuration to the cluster configured in `~/.kube/config`. Kubernetes cluster ID is required for filtering purposes in Cloud Logging dashboard.
-This module requires two `key.json` file placed in `./helm` and `./` folders respectively. The first one will be used by fluent-bit service, and the second one is required to deploy Terraform module.
+Terraform module creates the [Cloud Logging](https://cloud.yandex.com/en/docs/logging/) [log group](https://cloud.yandex.com/en/docs/logging/concepts/log-group) and deploys fluent-bit with required configuration in the cluster configured in `~/.kube/config`. Kubernetes cluster ID is required for filtering purposes in Cloud Logging dashboard.
+This module requires two `key.json` files placed in `./helm` and `./` folders respectively. The first one will be used by fluent-bit service, and the second one is required to deploy Terraform module (OAuth token can be used instead).
 
 # Prerequisites
 
@@ -13,8 +13,8 @@ This module requires two `key.json` file placed in `./helm` and `./` folders res
 
 2. Kubernetes cluster ID (optional)
 3. Kubernetes authentication configured (`~/.kube/config` must already exist)
-3. YC configuration variables: `folder_id`, `cloud_id` (can be obtained through `yc config list`)
-4. Terraform provider authentication through service account `key.json` file
+3. YC configuration variables: `folder_id`, `cloud_id` (can be [obtained](https://cloud.yandex.com/en/docs/cli/cli-ref/managed-yc/config/list) through `yc config list`)
+4. Terraform provider [authentication](https://cloud.yandex.com/en/docs/solutions/infrastructure-management/terraform-quickstart#configure-provider) through service account `key.json` file
 
 # Steps
 
